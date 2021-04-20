@@ -34,7 +34,7 @@ class OrderPageLocators:
 
 
 class PaymentPageLocators:
-    IFRAME = (By.CSS_SELECTOR, '#qa-iframe-widget')
+    IFRAME = (By.CSS_SELECTOR, '.qa-iframe-widget')
     IFRAME_BANK_CARD = (By.XPATH, '//*[@id="root"]/div/div/div/div/div/div/div/div/div[2]/div[1]/div')
 
 

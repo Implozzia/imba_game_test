@@ -20,3 +20,4 @@ def test_order_from_catalog_page(browser):
     page.accept_order()
     time.sleep(10)  # TODO заменить на нормальное ожидание
     page.iframe_order()
+    time.sleep(5)
