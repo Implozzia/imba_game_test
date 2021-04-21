@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 
 class BasePageLocators:
     CART_ICON = (By.CSS_SELECTOR, '.basket-link')
+    HEADER_CATALOG_LINK = (By.LINK_TEXT, 'Магазин')
+    POPUP_CONTINUE_SHOPPING = (By.CSS_SELECTOR, '.thankyou-popup__continue-link')
 
 
 class CartPageLocators:
@@ -16,6 +18,11 @@ class CatalogPageLocators:
     MERCH_TAB = (By.CSS_SELECTOR, '.productslist-categories__item--6')
     MOUSEPAD = (By.CSS_SELECTOR, '.product-item:nth-child(6)')
     MOUSEPAD_BTN = (By.CSS_SELECTOR, '.product-item:nth-child(6) button')
+    FIRST_ITEM_ON_PAGE = (By.CSS_SELECTOR, '.product-item:nth-child(1) button')
+    SHAKER = (By.CSS_SELECTOR, '.product-item:nth-child(12)')
+    SHAKER_BTN = (By.CSS_SELECTOR, '.product-item:nth-child(12) button')
+    MANGO = (By.CSS_SELECTOR, '.product-item:nth-child(7)')
+    MANGO_BTN = (By.CSS_SELECTOR, '.product-item:nth-child(7) button')
 
 
 class OrderPageLocators:
@@ -38,8 +45,13 @@ class PaymentPageLocators:
     IFRAME_BANK_CARD = (By.XPATH, '//*[@id="root"]/div/div/div/div/div/div/div/div/div[2]/div[1]/div')
 
 
+class ProductPageLocators:
+    ADD_TO_BASKET_BTN = (By.CSS_SELECTOR, '.vers1')
+    INCREMENT_QUANTITY = (By.CSS_SELECTOR, '.product-card__plus')
+
+
 class MainPageLocators:
     MOSAIC_ADD_TO_BASKET_BTN = (By.CSS_SELECTOR, '.products-mosaic__item:nth-child(1) .indexproduct__buy-button')
-    POPUP_CONTINUE_SHOPPING = (By.CSS_SELECTOR, '.thankyou-popup__continue-link')
+
 
 

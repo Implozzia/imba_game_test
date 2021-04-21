@@ -14,3 +14,11 @@ class BasePage:
         basket_icon = self.browser.find_element(*BasePageLocators.CART_ICON)
         basket_icon.click()
 
+    def go_to_catalog_page(self):
+        catalog_page_link = self.browser.find_element(*BasePageLocators.HEADER_CATALOG_LINK)
+        catalog_page_link.click()
+
+    def continue_shopping_popup(self):
+        continue_shopping_btn = self.browser.find_element(*BasePageLocators.POPUP_CONTINUE_SHOPPING)
+        continue_shopping_btn.click()
+
