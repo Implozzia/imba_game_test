@@ -4,7 +4,7 @@ import time
 
 
 def test_order_from_catalog_page(browser):
-    link = 'https://imba.shop/collection/tovary'
+    link = 'https://kz.imba.shop/'
     page = CatalogPage(browser, link)
     browser.implicitly_wait(10)
     page.open()
