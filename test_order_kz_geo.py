@@ -2,6 +2,8 @@ from .pages.main_page import MainPage
 from .pages.base_page import BasePage
 from .pages.product_page import ProductPage
 from .pages.catalog_page import CatalogPage
+from .pages.basket_page import BasketPage
+from .pages.order_page import OrderPage
 from selenium import webdriver
 import time
 
@@ -32,7 +34,20 @@ def test_order_from_catalog_page(browser):
     product_page.add_to_basket()
     time.sleep(2)
     base_page.continue_shopping_popup()
-
     base_page.go_to_basket_page()
-    time.sleep(10)
+
+    basket_page = BasketPage(browser, browser.current_url)
+    basket_page.scroll_to_promocode_area()
+    basket_page.use_promocode()
+    basket_page.should_be_promocode_text()
+    basket_page.go_to_order_page()
+
+    order_page = OrderPage(browser, browser.current_url)
+    order_page.should_be_free_delivery()
+    browser.back()
+
+    basket_page.delete_mango_item()
+    basket_page.go_to_order_page()
+    time.sleep(5)
+
 

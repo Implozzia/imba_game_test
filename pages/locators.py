@@ -12,6 +12,7 @@ class CartPageLocators:
     PROMO_BTN = (By.CSS_SELECTOR, '.cart-block__send-button')
     PROMO_SUCCESS_TXT = (By.CSS_SELECTOR, '.cart-block__promo-text')
     ORDER_BTN = (By.CSS_SELECTOR, '.cart-block__order-button')
+    DELETE_MANGO_BTN = (By.XPATH, '/html/body/div[2]/div/form/div[1]/div[4]/div[2]/button')
 
 
 class CatalogPageLocators:
@@ -38,6 +39,7 @@ class OrderPageLocators:
     NEWS_CHECKBOX = (By.CSS_SELECTOR, '.co-input-information')
     CREATE_ORDER_BTN = (By.CSS_SELECTOR, '#create_order')
     DELIVERY_INFO = (By.CSS_SELECTOR, '.checkout-block__free-delivery')
+    FREE_DELIVERY = (By.CSS_SELECTOR, '#price_2298042')
 
 
 class PaymentPageLocators:
