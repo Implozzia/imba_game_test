@@ -39,7 +39,7 @@ class OrderPage(BasePage):
 
     def should_be_free_delivery(self):
         free_delivery = self.browser.find_element(*OrderPageLocators.FREE_DELIVERY).text
-        assert free_delivery == '+ 0 тг.', 'Free delivery is not available'
+        assert free_delivery == '0 тг.', 'Free delivery is not available'
 
     def accept_order(self):
         news_checkbox = self.browser.find_element(*OrderPageLocators.NEWS_CHECKBOX)

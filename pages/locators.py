@@ -40,7 +40,7 @@ class OrderPageLocators:
     NEWS_CHECKBOX = (By.CSS_SELECTOR, '.co-input-information')
     CREATE_ORDER_BTN = (By.CSS_SELECTOR, '#create_order')
     DELIVERY_INFO = (By.CSS_SELECTOR, '.checkout-block__free-delivery')
-    FREE_DELIVERY = (By.CSS_SELECTOR, '#price_2298042')
+    FREE_DELIVERY = (By.CSS_SELECTOR, '#delivery_price')
 
 
 class PaymentPageLocators:

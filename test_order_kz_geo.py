@@ -44,6 +44,7 @@ def test_order_from_catalog_page(browser):
     basket_page.go_to_order_page()
 
     order_page = OrderPage(browser, browser.current_url)
+    time.sleep(3)
     order_page.should_be_free_delivery()
     browser.back()
 
