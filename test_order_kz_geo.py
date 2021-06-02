@@ -25,10 +25,11 @@ def test_order_from_catalog_page(browser):
 
     product_page = ProductPage(browser, browser.current_url)
     product_page.add_to_basket()
+    time.sleep(2)
     page.continue_shopping_popup()
 
     base_page.go_to_catalog_page()
-    catalog_page.scroll_to_mango_and_open_item()
+    catalog_page.scroll_to_tropical_and_open_item()
 
     product_page.increment_quantity()
     product_page.add_to_basket()

@@ -22,8 +22,8 @@ class CatalogPageLocators:
     FIRST_ITEM_ON_PAGE = (By.CSS_SELECTOR, '.product-item:nth-child(1) button')
     SHAKER = (By.CSS_SELECTOR, '.product-item:nth-child(12)')
     SHAKER_BTN = (By.CSS_SELECTOR, '.product-item:nth-child(12) button')
-    MANGO = (By.CSS_SELECTOR, '.product-item:nth-child(7)')
-    MANGO_BTN = (By.CSS_SELECTOR, '.product-item:nth-child(7) button')
+    TROPICAL = (By.CSS_SELECTOR, '.product-item:nth-child(8)')
+    TROPICAL_BTN = (By.CSS_SELECTOR, '.product-item:nth-child(8) button')
 
 
 class OrderPageLocators:

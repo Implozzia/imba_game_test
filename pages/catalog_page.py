@@ -28,8 +28,8 @@ class CatalogPage(BasePage):
         ActionChains(self.browser).move_to_element(shaker).perform()
         shaker.click()
 
-    def scroll_to_mango_and_open_item(self):
-        mango = self.browser.find_element(*CatalogPageLocators.MANGO)
+    def scroll_to_tropical_and_open_item(self):
+        mango = self.browser.find_element(*CatalogPageLocators.TROPICAL)
         ActionChains(self.browser).move_to_element(mango).perform()
         mango.click()
 
