@@ -25,7 +25,6 @@ def test_order_from_catalog_page(browser):
     time.sleep(10)  # TODO заменить на нормальное ожидание
     order_page.should_be_available_all_delivery()
     order_page.accept_order()
-    time.sleep(10)  # TODO заменить на нормальное ожидание
 
     payment_page = PaymentPage(browser, browser.current_url)
     payment_page.iframe_order()

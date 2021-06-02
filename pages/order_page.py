@@ -1,5 +1,6 @@
 from .locators import OrderPageLocators
 from .base_page import BasePage
+import time
 
 
 class OrderPage(BasePage):
@@ -15,12 +16,17 @@ class OrderPage(BasePage):
         city_input.send_keys('г Нижний Новгород, Нижегородская обл.')
         name_input.click()
 
-        address_input = self.browser.find_element(*OrderPageLocators.ADDRESS)
-        address_input.send_keys('test test')
+        # address_input = self.browser.find_element(*OrderPageLocators.ADDRESS)
+        # address_input.send_keys('test test')
 
     def should_be_available_all_delivery(self):
+        delivery_imba_club = self.browser.find_element(*OrderPageLocators.IMBA_CLUB)
+        delivery_imba_club.click()
+        delivery_imba_club_text = self.browser.find_element(*OrderPageLocators.IMBA_CLUB).text
+        assert delivery_imba_club_text == 'Самовывоз из клуба Imba Game', 'Imba pickup is not available'
+
         delivery_sber = self.browser.find_element(*OrderPageLocators.DELIVERY_SBER).text
-        assert delivery_sber == 'Забрать в отделении Сбербанка или в Пятёрочке', 'Boxberry courier is not available'
+        assert delivery_sber == 'Забрать в отделении Сбербанка или в Пятёрочке', 'Sber courier is not available'
 
         delivery_boxberry_courier = self.browser.find_element(*OrderPageLocators.DELIVERY_BOXBERRY_COURIER).text
         assert delivery_boxberry_courier == 'Курьером Boxberry (Только онлайн оплата)', 'Boxberry courier is not available'

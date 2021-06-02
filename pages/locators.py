@@ -32,6 +32,7 @@ class OrderPageLocators:
     CITY = (By.CSS_SELECTOR, '#shipping_address_full_locality_name')
     ADDRESS = (By.CSS_SELECTOR, '#shipping_address_address')
     ORDER_BTN = (By.CSS_SELECTOR, '#create_order')
+    IMBA_CLUB = (By.CSS_SELECTOR, '#delivery_title_2896395')
     DELIVERY_SBER = (By.CSS_SELECTOR, '#delivery_title_2860009')
     DELIVERY_BOXBERRY_COURIER = (By.XPATH, '//*[@id="delivery_variants"]/div[2]/div[2]/label[1]/span[2]/span[1]')
     DELIVERY_BOXBERRY_PICKUP = (By.XPATH, '//*[@id="delivery_variants"]/div[2]/div[2]/label[2]/span[2]/span[1]')
@@ -54,6 +55,3 @@ class ProductPageLocators:
 
 class MainPageLocators:
     MOSAIC_ADD_TO_BASKET_BTN = (By.CSS_SELECTOR, '.products-mosaic__item:nth-child(1) .indexproduct__buy-button')
-
-
-
