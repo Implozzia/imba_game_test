@@ -1,5 +1,6 @@
 from .locators import OrderPageLocators
 from .base_page import BasePage
+from selenium.webdriver.common.keys import Keys
 import time
 
 
@@ -18,6 +19,26 @@ class OrderPage(BasePage):
 
         # address_input = self.browser.find_element(*OrderPageLocators.ADDRESS)
         # address_input.send_keys('test test')
+
+    def fill_order_page_data_kz_geo(self):
+        number_input = self.browser.find_element(*OrderPageLocators.NUMBER)
+        number_input.send_keys('+77110000000')
+
+        city_input = self.browser.find_element(*OrderPageLocators.CITY)
+        city_input.clear()
+        city_input.send_keys('г Павлодар, Павлодарская обл.')
+        time.sleep(1)
+        city_input.send_keys(Keys.DOWN)
+        city_input.send_keys(Keys.ENTER)
+
+        zip_code_input = self.browser.find_element(*OrderPageLocators.ZIP_CODE)
+        zip_code_input.send_keys('140011')
+
+        address_input = self.browser.find_element(*OrderPageLocators.ADDRESS)
+        address_input.send_keys('Камзин көшесі 74')
+
+        name_input = self.browser.find_element(*OrderPageLocators.NAME)
+        name_input.send_keys('test test')
 
     def should_be_available_all_delivery(self):
         delivery_imba_club = self.browser.find_element(*OrderPageLocators.IMBA_CLUB)
@@ -44,5 +65,9 @@ class OrderPage(BasePage):
     def accept_order(self):
         news_checkbox = self.browser.find_element(*OrderPageLocators.NEWS_CHECKBOX)
         news_checkbox.click()
+        order_btn = self.browser.find_element(*OrderPageLocators.CREATE_ORDER_BTN)
+        order_btn.click()
+
+    def accept_order_kz(self):
         order_btn = self.browser.find_element(*OrderPageLocators.CREATE_ORDER_BTN)
         order_btn.click()

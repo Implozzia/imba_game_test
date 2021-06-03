@@ -31,6 +31,7 @@ class OrderPageLocators:
     NAME = (By.CSS_SELECTOR, '#client_name')
     CITY = (By.CSS_SELECTOR, '#shipping_address_full_locality_name')
     ADDRESS = (By.CSS_SELECTOR, '#shipping_address_address')
+    ZIP_CODE = (By.CSS_SELECTOR, '#shipping_address_zip')
     ORDER_BTN = (By.CSS_SELECTOR, '#create_order')
     IMBA_CLUB = (By.CSS_SELECTOR, '#delivery_title_2896395')
     DELIVERY_SBER = (By.CSS_SELECTOR, '#delivery_title_2860009')

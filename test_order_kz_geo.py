@@ -50,6 +50,9 @@ def test_order_from_catalog_page(browser):
 
     basket_page.delete_mango_item()
     basket_page.go_to_order_page()
-    time.sleep(5)
+
+    order_page.fill_order_page_data_kz_geo()
+    order_page.accept_order_kz()
+
 
 
