@@ -9,7 +9,7 @@ import time
 
 
 def test_order_from_catalog_page(browser):
-    link = 'https://kz.imba.shop/'
+    link = 'https://by.imba.shop/'
     page = MainPage(browser, link)
     browser.implicitly_wait(5)
     page.open()
@@ -21,7 +21,7 @@ def test_order_from_catalog_page(browser):
 
     catalog_page = CatalogPage(browser, browser.current_url)
     catalog_page.add_first_item_to_cart()
-    catalog_page.scroll_to_shaker_and_open_item()
+    catalog_page.scroll_to_tropical_and_open_item()
 
     product_page = ProductPage(browser, browser.current_url)
     product_page.add_to_basket()
